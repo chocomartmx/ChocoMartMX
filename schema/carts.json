@@ -1,0 +1,65 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "product_id",
+    "title": "product.name",
+    "dbType": "integer:unsigned:foreign,products,id",
+    "htmlType": "select,$product",
+    "validations": "required|exists:products,id",
+    "relation": "mt1,Product,product_id,id"
+  },
+  {
+    "name": "user_id",
+    "title": "user.name",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "select,$user",
+    "validations": "required|exists:users,id",
+    "relation": "mt1,User,user_id,id"
+  },
+  {
+    "name": "options",
+    "title": "option.name",
+    "dbType": "hidden,mtm",
+    "htmlType":"select,$option",
+    "relation": "mtm,Option,cart_options",
+    "fillable": false,
+    "searchable": false
+  },
+  {
+    "name":"quantity",
+    "dbType": "integer:unsigned:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

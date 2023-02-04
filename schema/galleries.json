@@ -1,0 +1,60 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"description",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "validations": "required"
+  },
+  {
+    "name":"image",
+    "dbType": "string",
+    "htmlType": "file",
+    "fillable": false,
+    "searchable": false,
+    "inForm": true,
+    "orderable" :false,
+    "exportable": false,
+    "printable": false
+  },
+  {
+    "name": "market_id",
+    "title": "market.name",
+    "dbType": "integer:unsigned:foreign,markets,id",
+    "htmlType": "select,$market",
+    "validations": "required|exists:markets,id",
+    "relation": "mt1,Market,market_id,id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

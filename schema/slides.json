@@ -1,0 +1,112 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"order",
+    "dbType": "integer:unsigned:default,0",
+    "htmlType": "number"
+  },
+  {
+    "name":"text",
+    "dbType": "string,50",
+    "htmlType": "text"
+  },
+  {
+    "name":"button",
+    "dbType": "string,50",
+    "htmlType": "text"
+  },
+  {
+    "name": "text_position",
+    "dbType": "string,50:default,start",
+    "htmlType": "select,start:'start'",
+    "validations": "required"
+  },
+  {
+    "name":"text_color",
+    "dbType": "string,36",
+    "htmlType": "text"
+  },
+  {
+    "name":"button_color",
+    "dbType": "string,36",
+    "htmlType": "text"
+  },
+  {
+    "name":"background_color",
+    "dbType": "string,36",
+    "htmlType": "text"
+  },
+  {
+    "name":"indicator_color",
+    "dbType": "string,36",
+    "htmlType": "text"
+  },
+  {
+    "name":"image",
+    "dbType": "string",
+    "htmlType": "file",
+    "fillable": false,
+    "searchable": false,
+    "inForm": true,
+    "orderable" :false,
+    "exportable": false,
+    "printable": false
+  },
+  {
+    "name": "image_fit",
+    "dbType": "string,50:default,cover",
+    "htmlType": "select,cover:'cover'",
+    "validations": "required"
+  },
+  {
+    "name": "product_id",
+    "title": "product.name",
+    "dbType": "integer:unsigned:foreign,products,id",
+    "htmlType": "select,$product",
+    "relation": "mt1,Product,product_id,id"
+  },
+  {
+    "name": "market_id",
+    "title": "market.name",
+    "dbType": "integer:unsigned:foreign,markets,id",
+    "htmlType": "select,$market",
+    "relation": "mt1,Market,market_id,id"
+  },
+  {
+    "name":"enabled",
+    "dbType": "boolean:default,1",
+    "htmlType": "boolean"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]

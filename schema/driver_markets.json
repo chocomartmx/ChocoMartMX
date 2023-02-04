@@ -1,0 +1,16 @@
+[
+  {
+    "name": "user_id",
+    "dbType": "integer:unsigned:foreign,users,id",
+    "htmlType": "number",
+    "validations": "exists:users,id",
+    "primary": true
+  },
+  {
+    "name": "market_id",
+    "dbType": "integer:unsigned:foreign,markets,id",
+    "htmlType": "number",
+    "validations": "exists:markets,id",
+    "primary": true
+  }
+]

@@ -1,0 +1,81 @@
+[
+  {
+    "name": "id",
+    "dbType": "increments",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "primary": true,
+    "fillable": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name":"name",
+    "dbType": "string,127",
+    "htmlType": "text",
+    "validations": "required"
+  },
+  {
+    "name":"image",
+    "dbType": "string",
+    "htmlType": "file",
+    "fillable": false,
+    "searchable": false,
+    "inForm": true,
+    "orderable" :false,
+    "exportable": false,
+    "printable": false
+  },
+  {
+    "name":"description",
+    "dbType": "text",
+    "htmlType": "textarea",
+    "validations": "required",
+    "inIndex": false
+  },
+  {
+    "name":"price",
+    "dbType": "double,8,2:default,0",
+    "htmlType": "number",
+    "validations": "required"
+  },
+  {
+    "name": "product_id",
+    "title": "product.name",
+    "dbType": "integer:unsigned:foreign,products,id",
+    "htmlType": "select,$product",
+    "validations": "required|exists:products,id",
+    "relation": "mt1,Product,product_id,id"
+  },
+  {
+    "name": "option_group_id",
+    "title": "option_group.name",
+    "dbType": "integer:unsigned:foreign,option_groups,id",
+    "htmlType": "select,$optionGroup",
+    "validations": "required|exists:option_groups,id",
+    "relation": "mt1,OptionGroup,option_group_id,id"
+  },
+  {
+    "name": "created_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": false
+  },
+  {
+    "name": "updated_at",
+    "dbType": "timestamp",
+    "htmlType": "",
+    "validations": "",
+    "searchable": false,
+    "fillable": false,
+    "primary": false,
+    "inForm": false,
+    "inIndex": true
+  }
+]
